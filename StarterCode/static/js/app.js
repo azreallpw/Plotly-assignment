@@ -21,3 +21,15 @@ function buildChart(sample) {
         var otu_labels = result.otu_labels;
         var sample_values = result.sample_values;
 })};
+
+function buildChart(sampleid) {
+    var xArray = result.otu_ids;
+    var yArray = result.sample_values;
+    var data = [{
+        x: xArray,
+        y: yArray,
+        type: "bar"  
+    }];
+    var layout = {title:"Belly Button Biodiversity"};
+
+Plotly.newPlot("myPlot", data, layout);
